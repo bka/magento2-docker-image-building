@@ -1,0 +1,16 @@
+php:
+  image: bleers/magento2-base:1.0
+  ports:
+    - 8123:80
+  links:
+    - mysql
+  volumes:
+    - ./Source:/var/www/html
+  env_file:
+    - docker-env.yml
+mysql:
+  image: mysql:5.6
+  ports:
+    - 3307:3306
+  env_file:
+    - docker-env.yml

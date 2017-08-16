@@ -1,0 +1,7 @@
+Source/.git
+Source/node_modules
+Source/dev
+Source/phpserver
+Source/var/log
+Source/var/cache
+Source/var/session
