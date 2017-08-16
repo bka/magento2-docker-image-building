@@ -17,10 +17,10 @@ For deployment, a lot of files need to be pre-generated. Unfortunately there is 
 Execute all generation commands:
 
     docker-compose run --rm --no-deps php bash -c 'composer install --optimize-autoloader --no-dev'
-    docker-compose run --rm --no-deps php bash -c 'bin/magento setup:install --db-host=mysql --db-name=magento2 --db-user=magento2 --db-password=magento2 --admin-user=admin --admin-password=admin123 --admin-email=admin@localhost.de --admin-firstname=admin --admin-lastname=admin --backend-frontname=admin --base-url=http://localhost:8123/'
-    docker-compose run --rm --no-deps php bash -c "bin/magento dev:source-theme:deploy"
-    docker-compose run --rm --no-deps php bash -c "php -d memory_limit=1024M bin/magento setup:di:compile"
-    docker-compose run --rm --no-deps php bash -c "php -d memory_limit=1024M bin/magento setup:static-content:deploy"
+    docker-compose run --rm --no-deps php bash -c 'php -d memory_limit=1024M bin/magento setup:install --db-host=mysql --db-name=magento2 --db-user=magento2 --db-password=magento2 --admin-user=admin --admin-password=admin123 --admin-email=admin@localhost.de --admin-firstname=admin --admin-lastname=admin --backend-frontname=admin --base-url=http://localhost:8123/'
+    docker-compose run --rm --no-deps php bash -c 'php -d memory_limit=1024M bin/magento dev:source-theme:deploy'
+    docker-compose run --rm --no-deps php bash -c 'php -d memory_limit=1024M bin/magento setup:di:compile'
+    docker-compose run --rm --no-deps php bash -c 'php -d memory_limit=1024M bin/magento setup:static-content:deploy'
 
 # Optional: Install Sampledata
 
